@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecStation</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+    <form id="formAdmin">
+        <h2>Registro administrador</h2>
+
+        <label for="id_admin">Usuario</label>
+        <input type="text" id="id_admin" placeholder="ID usuario" required>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+
+        <label for="apellido_P">Apellido paterno</label>
+        <input type="text" id="apellido_P" placeholder="Apellido paterno" required>
+
+        <label for="apellido_M">Apellido materno</label>
+        <input type="text" id="apellido_M" placeholder="Apellido materno" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" placeholder="Teléfono" required>
+
+        <label for="rango">Rango</label>
+        <input type="text" id="rango" placeholder="Rango" required>
+
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" placeholder="Contraseña" required>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <script type="module" src="JS/conexion.js"></script>
+    <script type="module" src="JS/formAdmin.js"></script>
+
+</body>
+</html>
