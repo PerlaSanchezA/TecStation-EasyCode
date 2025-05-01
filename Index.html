@@ -1,42 +1,90 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang = "es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>TecStation</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel = "stylesheet" href = "CSS/style.css">
 </head>
+
 <body>
     
-    <form id="formAdmin">
+    <form id = "formAdmin">
         <h2>Registro administrador</h2>
 
-        <label for="id_admin">Usuario</label>
-        <input type="text" id="id_admin" placeholder="ID usuario" required>
+        <label for = "id_admin">Usuario</label>
+        <input type = "text" id = "id_admin" placeholder = "ID usuario" required>
 
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" placeholder="Nombre" required>
+        <label for = "nombre">Nombre</label>
+        <input type = "text" id="nombre" placeholder="Nombre" required>
 
-        <label for="apellido_P">Apellido paterno</label>
-        <input type="text" id="apellido_P" placeholder="Apellido paterno" required>
+        <label for = "apellido_P">Apellido paterno</label>
+        <input type = "text" id="apellido_P" placeholder="Apellido paterno" required>
 
-        <label for="apellido_M">Apellido materno</label>
-        <input type="text" id="apellido_M" placeholder="Apellido materno" required>
+        <label for = "apellido_M">Apellido materno</label>
+        <input type = "text" id = "apellido_M" placeholder = "Apellido materno" required>
 
-        <label for="telefono">Teléfono</label>
-        <input type="text" id="telefono" placeholder="Teléfono" required>
+        <label for = "telefono">Teléfono</label>
+        <input type = "text" id = "telefono" placeholder = "Teléfono" required>
 
-        <label for="rango">Rango</label>
-        <input type="text" id="rango" placeholder="Rango" required>
+        <label for = "rango">Rango</label>
+        <input type = "text" id = "rango" placeholder = "Rango" required>
 
-        <label for="contraseña">Contraseña</label>
-        <input type="password" id="contraseña" placeholder="Contraseña" required>
+        <label for = "contraseña">Contraseña</label>
+        <input type = "password" id = "contraseña" placeholder = "Contraseña" required>
 
-        <button type="submit">Registrar</button>
+        <button type = "submit">Registrar</button>
     </form>
 
-    <script type="module" src="JS/conexion.js"></script>
-    <script type="module" src="JS/formAdmin.js"></script>
+    <form id = "formPropietario">
+        <h2>Registro propietario</h2>
+
+        <label for = "id_propietario">Propietario</label>
+        <input type = "text" id = "id_propietario" placeholder = "ID propietario" required>
+
+        <label for = "nombre">Nombre</label>
+        <input type = "text" id = "nombre" placeholder = "Nombre" required>
+
+        <label for = "apellido_P">Apellido paterno</label>
+        <input type = "text" id = "apellido_P" placeholder = "Apellido paterno" required>
+
+        <label for = "apellido_M">Apellido materno</label>
+        <input type = "text" id = "apellido_M" placeholder = "Apellido materno" required>
+
+        <label for = "telefono">Teléfono</label>
+        <input type = "text" id = "telefono" placeholder = "Teléfono" required>
+
+        <label for = "correo">Correo electrónico</label>
+        <input type = "text" id = "correo" placeholder = "Correo electrónico" required>
+
+        <label for="tipo">Tipo de propietario</label>
+        <input type = "text" id = "tipo" placeholder = "Tipo de propietario" required>
+
+        <button type = "submit">Registrar</button>
+    </form>
+
+    <form id = "formVehiculo">
+        <h2>Registro vehicular</h2>
+
+        <label for = "placa_V">Placa vehícular</label>
+        <input type = "text" id = "placa_V" placeholder = "Placa vehicular" required>
+
+        <label for = "marca">Marca</label>
+        <input type = "text" id = "marca" placeholder = "Marca" required>
+
+        <label for = "modelo">Modelo</label>
+        <input type = "text" id = "modelo" placeholder = "Modelo" required>
+
+        <label for = "color">Color</label>
+        <input type = "text" id = "color" placeholder = "Color" required>
+
+        <button type = "submit">Registrar</button>
+    </form>
+
+
+    <script type = "module" src = "JS/conexion.js"></script>
+    <script type = "module" src = "JS/formAdmin.js"></script>
 
 </body>
 </html>
