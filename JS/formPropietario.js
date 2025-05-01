@@ -10,8 +10,9 @@ document.getElementById("formPropietario").addEventListener("submit", function (
     const telefono = document.getElementById("telefono").value.trim();
     const correo = document.getElementById("correo").value.trim();
     const tipo = document.getElementById("tipo").value.trim();
+    const contraseña = document.getElementById("contraseña").value.trim();
 
-    const campos = [id, nombre, apellido_P, apellido_M, telefono, correo, tipo];
+    const campos = [id, nombre, apellido_P, apellido_M, telefono, correo, tipo, contraseña];
     if (campos.some(campo => campo === "")) {
         alert("Por favor completa todos los campos.");
         return;
@@ -31,7 +32,8 @@ document.getElementById("formPropietario").addEventListener("submit", function (
                     apellido_M,
                     telefono,
                     correo,
-                    tipo  
+                    tipo, 
+                    contraseña  
                 })
                 .then(() => {
                     alert("Propietario registrado correctamente.");
