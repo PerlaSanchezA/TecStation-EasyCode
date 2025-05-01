@@ -37,35 +37,36 @@
         <button type = "submit">Registrar</button>
     </form>
 
-    <form id = "formPropietario">
+    <form id="formPropietario">
         <h2>Registro propietario</h2>
-
-        <label for = "id_propietario">Propietario</label>
-        <input type = "text" id = "id_propietario" placeholder = "ID propietario" required>
-
-        <label for = "nombre">Nombre</label>
-        <input type = "text" id = "nombre" placeholder = "Nombre" required>
-
-        <label for = "apellido_P">Apellido paterno</label>
-        <input type = "text" id = "apellido_P" placeholder = "Apellido paterno" required>
-
-        <label for = "apellido_M">Apellido materno</label>
-        <input type = "text" id = "apellido_M" placeholder = "Apellido materno" required>
-
-        <label for = "telefono">Teléfono</label>
-        <input type = "text" id = "telefono" placeholder = "Teléfono" required>
-
-        <label for = "correo">Correo electrónico</label>
-        <input type = "text" id = "correo" placeholder = "Correo electrónico" required>
-
-        <label for="tipo">Tipo de propietario</label>
-        <input type = "text" id = "tipo" placeholder = "Tipo de propietario" required>
-
-        <label for = "contraseña">Contraseña</label>
-        <input type = "password" id = "contraseña" placeholder = "Contraseña" required>
-
-        <button type = "submit">Registrar</button>
+    
+        <label for="id_propietario">ID Propietario</label>
+        <input type="text" id="id_propietario" placeholder="ID propietario" required>
+    
+        <label for="nombreP">Nombre</label>
+        <input type="text" id="nombreP" placeholder="Nombre" required>
+    
+        <label for="apellido_PP">Apellido paterno</label>
+        <input type="text" id="apellido_PP" placeholder="Apellido paterno" required>
+    
+        <label for="apellido_MP">Apellido materno</label>
+        <input type="text" id="apellido_MP" placeholder="Apellido materno" required>
+    
+        <label for="telefonoP">Teléfono</label>
+        <input type="tel" id="telefonoP" placeholder="Teléfono" pattern="[0-9]{10}" required>
+    
+        <label for="correoP">Correo electrónico</label>
+        <input type="email" id="correoP" placeholder="Correo electrónico" required>
+    
+        <label for="tipoP">Tipo de propietario</label>
+        <input type="text" id="tipoP" placeholder="Tipo de propietario" required>
+    
+        <label for="contraseñaP">Contraseña</label>
+        <input type="password" id="contraseñaP" placeholder="Contraseña" required>
+    
+        <button type="submit">Registrar</button>
     </form>
+    
 
     <form id = "formVehiculo">
         <h2>Registro vehicular</h2>
@@ -92,25 +93,30 @@
         <input type = "text" id = "folioT" placeholder = "Folio de tarjetón" required>
 
         <label for = "f_Creacion">Fecha de creación</label>
-        <input type = "date" id = "f_Creacion" placeholder = "Fecha de creación" required>
+        <input type = "date" id = "f_CreacionT" placeholder = "Fecha de creación" required>
 
         <label for = "f_Expiracion">Fecha de expiración</label>
-        <input type = "date" id = "f_Expiracion" placeholder = "Fecha de expiración" required>
+        <input type = "date" id = "f_ExpiracionT" placeholder = "Fecha de expiración" required>
 
         <label for = "id_propietario">ID propietario</label>
-        <input type = "text" id = "id_propietario" placeholder = "ID propietario" required>
+        <input type = "text" id = "id_propietarioT" placeholder = "ID propietario" required>
 
         <label for = "placa_V">Placa vehicular</label>
-        <input type = "text" id = "placa_V" placeholder = "Placa vehicular" required>
+        <input type = "text" id = "placa_VT" placeholder = "Placa vehicular" required>
 
         <label for = "id_admin">ID administrador</label>
-        <input type = "text" id = "id_admin" placeholder = "ID administrador" required>
+        <input type = "text" id = "id_adminT" placeholder = "ID administrador" required>
 
         <button type = "submit">Registrar</button>
     </form>
 
     <script type = "module" src = "JS/conexion.js"></script>
     <script type = "module" src = "JS/formAdmin.js"></script>
+    <script type = "module" src = "JS/formPropietario.js"></script>
+    <script type = "module" src = "JS/formVehiculo.js"></script>
+    <script type = "module" src = "JS/formTarjeton.js"></script>
+
+    
 
 </body>
 </html>

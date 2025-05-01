@@ -4,11 +4,11 @@ document.getElementById("formTarjeton").addEventListener("submit", function (e) 
     e.preventDefault(); // Prevenir el envío del formulario por defecto
 
     const folioT = document.getElementById("folioT").value.trim();
-    const f_Creacion = document.getElementById("f_Creacion").value.trim();
-    const f_Expiracion = document.getElementById("f_Expiracion").value.trim();
-    const id_propietario = document.getElementById("id_propietario").value.trim();
-    const placa_V = document.getElementById("placa_V").value.trim();
-    const id_admin = document.getElementById("id_admin").value.trim();
+    const f_Creacion = document.getElementById("f_CreacionT").value.trim();
+    const f_Expiracion = document.getElementById("f_ExpiracionT").value.trim();
+    const id_propietario = document.getElementById("id_propietarioT").value.trim();
+    const placa_V = document.getElementById("placa_VT").value.trim();
+    const id_admin = document.getElementById("id_adminT").value.trim();
 
     const campos = [folioT, f_Creacion, f_Expiracion, id_propietario, placa_V, id_admin];
     if (campos.some(campo => campo === "")) {
@@ -16,15 +16,16 @@ document.getElementById("formTarjeton").addEventListener("submit", function (e) 
         return;
     }
 
-    const tarjetoRef = ref(db, "tarjetones/" + folioT);
+    const tarjetonRef = ref(db, "tarjetones/" + folioT);
 
-    get(tarjetoRef)
+
+    get(tarjetonRef)
         .then((snapshot) => {
             if (snapshot.exists()) {
                 alert("Folio de tarjetón ya registrado.");
             } else {
                 // Guardar el nuevo tarjetón en la base de datos
-                set(tarjetoRef, {
+                set(tarjetonRef, {
                     f_Creacion,
                     f_Expiracion,
                     id_propietario,

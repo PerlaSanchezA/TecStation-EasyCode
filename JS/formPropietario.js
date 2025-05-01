@@ -1,16 +1,16 @@
 import { db, ref, set, get } from "./conexion.js"; // Importar la base de datos y funciones necesarias
 
-document.getElementById("formPropietario").addEventListener("submit", function (e) { // Agregar evento al formulario
+document.getElementById("formPropietario").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevenir el envío del formulario por defecto
 
     const id = document.getElementById("id_propietario").value.trim();
-    const nombre = document.getElementById("nombre").value.trim();
-    const apellido_P = document.getElementById("apellido_P").value.trim();
-    const apellido_M = document.getElementById("apellido_M").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    const correo = document.getElementById("correo").value.trim();
-    const tipo = document.getElementById("tipo").value.trim();
-    const contraseña = document.getElementById("contraseña").value.trim();
+    const nombre = document.getElementById("nombreP").value.trim();
+    const apellido_P = document.getElementById("apellido_PP").value.trim();
+    const apellido_M = document.getElementById("apellido_MP").value.trim();
+    const telefono = document.getElementById("telefonoP").value.trim();
+    const correo = document.getElementById("correoP").value.trim();
+    const tipo = document.getElementById("tipoP").value.trim();
+    const contraseña = document.getElementById("contraseñaP").value.trim();
 
     const campos = [id, nombre, apellido_P, apellido_M, telefono, correo, tipo, contraseña];
     if (campos.some(campo => campo === "")) {
@@ -25,15 +25,14 @@ document.getElementById("formPropietario").addEventListener("submit", function (
             if (snapshot.exists()) {
                 alert("ID de propietario ya registrado.");
             } else {
-                // Guardar el nuevo administrador en la base de datos
                 set(propietarioRef, {
                     nombre,
                     apellido_P,
                     apellido_M,
                     telefono,
                     correo,
-                    tipo, 
-                    contraseña  
+                    tipo,
+                    contraseña 
                 })
                 .then(() => {
                     alert("Propietario registrado correctamente.");
